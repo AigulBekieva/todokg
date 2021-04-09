@@ -11,3 +11,6 @@ def go(request):
             
 def check(request):
     return HttpResponse("текшеруу")
+
+def third(request):
+    return HttpResponse("This is page test3")   
