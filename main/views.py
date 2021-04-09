@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 def homepage(request):
     return render(request, "index.html")
@@ -9,3 +9,5 @@ def test(request):
 def go(request):
     return render(request, "go.html")
             
+def check(request):
+    return HttpResponse("текшеруу")
