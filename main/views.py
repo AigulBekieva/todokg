@@ -14,3 +14,12 @@ def check(request):
 
 def third(request):
     return HttpResponse("This is page test3")   
+
+def hw31(request):
+    return HttpResponse("Сиздин жазуунуз ийгиликтуу кошулду.")   
+
+def hw31change(request):
+    return HttpResponse("Сиздин жазуунуз ийгиликтуу озгортулду.")    
+
+def hw31del(request):
+    return HttpResponse("Сиздин жазуунуз жок кылынды.")    

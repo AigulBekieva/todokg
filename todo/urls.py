@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage, test, go, check, third
+from main.views import homepage, test, go, check, third, hw31, hw31change, hw31del
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,6 +25,9 @@ urlpatterns = [
     path("test/", test, name="test"),
     path("go/", go, name="go"),
     path("check/", check),
-    path("third/", third, name="test3")
+    path("third/", third, name="test3"),
+    path("hw31/", hw31, name="hw31"),
+    path("hw31change/", hw31change, name="hw31change"),
+    path("hw31del/", hw31del, name="hw31del")
 ]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
