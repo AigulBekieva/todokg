@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import ToDo
 
 def homepage(request):
@@ -25,3 +25,10 @@ def hw31change(request):
 
 def hw31del(request):
     return HttpResponse("Сиздин жазуунуз жок кылынды.")    
+
+def add_todo(request):
+    form = request.POST
+    text = form["todo_text"]
+    todo = ToDo(text=text)
+    todo.save()
+    return redirect(test)
