@@ -30,5 +30,6 @@ urlpatterns = [
     path("hw31change/", hw31change, name="hw31change"),
     path("hw31del/", hw31del, name="hw31del"),
     path("add-todo/",add_todo, name="add-todo"),
+    path("delete-todo/<id>/", delete_todo, name="delete-todo"),
 ]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
